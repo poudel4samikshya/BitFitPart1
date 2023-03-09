@@ -18,4 +18,10 @@ interface ActivityDao {
 
     @Query("DELETE FROM food_table")
     fun deleteAll()
+    @Query("SELECT MAX(calories) FROM food_table")
+    fun max():Int
+    @Query("SELECT MIN(calories) FROM food_table")
+    fun min() :Int
+    @Query("SELECT AVG(calories) FROM food_table")
+    fun avg() :Int
 }
